@@ -1,0 +1,78 @@
+
+input.toLeft{
+	display: inLine;
+}
+
+.containerR {
+  display: block;
+  position: relative;
+  padding-left: 23px;
+  margin-bottom: 13px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.containerR input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmarkR {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.containerR:hover input ~ .checkmarkR {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.containerR input:checked ~ .checkmarkR {
+  background-color: green;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmarkR:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.containerR input:checked ~ .checkmarkR:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.containerR .checkmarkR:after {
+ 	top: 5px;
+	left: 5px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: white;
+}
+
+
+img{
+	width:85px;
+	height:85px;
+}
+
+img.payPal{
+	width:160;
+	height:75;
+}
+
